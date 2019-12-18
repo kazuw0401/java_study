@@ -1,17 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        int sex = 2;
-        int age = 25;
-        System.out.println("こんにちは。");
-        if (sex == 0) {
-            System.out.println("私は男です。");
-            System.out.println(age + "歳です。");
-        } else if (sex == 1) {
-            System.out.println("私は女です。");
-            System.out.println("年齢は秘密です。");
-        } else {
-            System.out.println("性別と年齢は秘密です。");
+        System.out.println("数あてゲーム");
+        int ans = new java.util.Random().nextInt(10);
+        for (int i = 0; i < 5; i++) {
+            System.out.println("0～9の数字を入力してください。");
+            int num = new java.util.Scanner(System.in).nextInt();
+            System.out.println(ans); // 確認のため、ランダム生成された数を出力
+            if (ans == num) {
+                System.out.println("アタリ！");
+                break; // アタリの場合、途中で終了させる上で必要。
+            } else {
+                System.out.println("違います。");
+            }
         }
-        System.out.println("よろしくお願いします！");
+        System.out.println("ゲームを終了します。");
     }
 }
