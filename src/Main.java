@@ -1,4 +1,7 @@
 import practice6.First;
+import practice8.Cleric;
+
+import java.util.Random;
 
 public class Main {
 //    public static void main(String[] args) {
@@ -19,11 +22,22 @@ public class Main {
 //    }
 
 //    練習6
-    public static void main(String[] args) throws Exception {
-        First.introduceMyself();
-        practice6.Second.showMessage1();
-        practice6.Second.showMessage2();
-        Thread.sleep(3000);
-        practice6.Third.betrayMessage();
+//    public static void main(String[] args) throws Exception {
+//        First.introduceMyself();
+//        practice6.Second.showMessage1();
+//        practice6.Second.showMessage2();
+//        Thread.sleep(3000);
+//        practice6.Third.betrayMessage();
+//    }
+
+//    練習8
+    public static void main(String[] args) {
+        Cleric c = new Cleric();
+        c.name = "Tom";
+        c.hp = 100;
+        c.mp = 10;
+
+        c.selfRecover();
+        c.pray(new Random().nextInt(3));
     }
 }
