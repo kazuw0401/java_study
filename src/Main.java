@@ -1,18 +1,29 @@
+import practice6.First;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("数あてゲーム");
-        int ans = new java.util.Random().nextInt(10);
-        for (int i = 0; i < 5; i++) {
-            System.out.println("0～9の数字を入力してください。");
-            int num = new java.util.Scanner(System.in).nextInt();
-            System.out.println(ans); // 確認のため、ランダム生成された数を出力
-            if (ans == num) {
-                System.out.println("アタリ！");
-                break; // アタリの場合、途中で終了させる上で必要。
-            } else {
-                System.out.println("違います。");
-            }
-        }
-        System.out.println("ゲームを終了します。");
+//    public static void main(String[] args) {
+//        System.out.println("数あてゲーム");
+//        int ans = new java.util.Random().nextInt(10);
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println("0～9の数字を入力してください。");
+//            int num = new java.util.Scanner(System.in).nextInt();
+//            System.out.println(ans); // 確認のため、ランダム生成された数を出力
+//            if (ans == num) {)
+//                System.out.println("アタリ！");
+//                break; // アタリの場合、途中で終了させる上で必要。
+//            } else {
+//                System.out.println("違います。");
+//            }
+//        }
+//        System.out.println("ゲームを終了します。");
+//    }
+
+//    練習6
+    public static void main(String[] args) throws Exception {
+        First.introduceMyself();
+        practice6.Second.showMessage1();
+        practice6.Second.showMessage2();
+        Thread.sleep(3000);
+        practice6.Third.betrayMessage();
     }
 }
