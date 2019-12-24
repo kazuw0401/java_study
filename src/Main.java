@@ -31,11 +31,23 @@ public class Main {
 //    }
 
 //    練習8
+//    public static void main(String[] args) {
+//        Cleric c = new Cleric();
+//        c.name = "Tom";
+//        c.hp = 100;
+//        c.mp = 10;
+//
+//        c.selfRecover();
+//        c.pray(new Random().nextInt(3));
+//    }
+
+//    練習9
     public static void main(String[] args) {
-        Cleric c = new Cleric();
-        c.name = "Tom";
-        c.hp = 100;
-        c.mp = 10;
+//        コンストラクタ宣言をしているので、インスタンス作成時にname,hp,mpの引数を設定
+        Cleric c = new Cleric("Tom", 100, 10);
+//        c.name = "Tom";
+//        c.hp = 100;
+//        c.mp = 10;
 
         c.selfRecover();
         c.pray(new Random().nextInt(3));
