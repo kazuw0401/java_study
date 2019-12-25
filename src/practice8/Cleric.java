@@ -18,6 +18,27 @@ public class Cleric {
         this.mp = mp;
     }
 
+    public String getName() {
+        return  this.name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHp() {
+        return this.hp;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public int getMp() {
+        return this.mp;
+    }
+    public void setMp(int mp) {
+        this.mp = mp;
+    }
+
 //    司祭の名前、HPのみ入力されている場合はその値を代入
     public Cleric(String name, int hp) {
         this(name, hp, Cleric.MAX_HP);

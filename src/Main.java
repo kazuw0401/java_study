@@ -1,3 +1,5 @@
+import practice10.Wand;
+import practice10.Wizard;
 import practice6.First;
 import practice8.Cleric;
 
@@ -49,7 +51,26 @@ public class Main {
 //        c.hp = 100;
 //        c.mp = 10;
 
-        c.selfRecover();
-        c.pray(new Random().nextInt(3));
+//        c.selfRecover();
+//        c.pray(new Random().nextInt(3));
+
+        Wizard wiz = new Wizard();
+        wiz.setName("Mary");
+        wiz.setHp(40);
+        wiz.setMp(20);
+
+        Wand w = new Wand();
+        w.setName("水晶の杖");
+        w.setPower(5.0);
+
+        System.out.println("司祭の名前：" + c.name);
+        System.out.println("司祭のHP：" + c.hp);
+        System.out.println("司祭のMP：" + c.mp);
+
+        System.out.println("魔法使いの名前：" + wiz.getName());
+        System.out.println("魔法使いのHP：" + wiz.getHp());
+        System.out.println("魔法使いのMP：" + wiz.getMp());
+        System.out.println("杖の名前：" + w.getName());
+        System.out.println("杖の増幅：" + w.getPower());
     }
 }
