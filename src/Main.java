@@ -1,5 +1,6 @@
 import practice10.Wand;
 import practice10.Wizard;
+import practice11.PoisonMatango;
 import practice6.First;
 import practice8.Cleric;
 
@@ -72,5 +73,9 @@ public class Main {
         System.out.println("魔法使いのMP：" + wiz.getMp());
         System.out.println("杖の名前：" + w.getName());
         System.out.println("杖の増幅：" + w.getPower());
+
+        PoisonMatango pm = new PoisonMatango('A');
+        pm.attack(c);
+
     }
 }
