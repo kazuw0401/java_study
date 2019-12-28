@@ -6,7 +6,12 @@ import practice8.Cleric;
 import practice13.A;
 import practice13.B;
 import practice13.Y;
+import practice14.Account;
 
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 public class Main {
@@ -83,13 +88,42 @@ public class Main {
 //    }
 
 //    練習13
+//    public static void main(String[] args) {
+//        Y[] array = new Y[2];
+//        array[0] = new A();
+//        array[1] = new B();
+//        for (Y y : array) {
+//            y.a();
+//            y.b();
+//        }
+//    }
+
+//    練習14-1
+//    public static void main(String[] args) {
+//        Date now = new Date();
+//        Calendar c = Calendar.getInstance();
+//        c.setTime(now);
+//        int day = c.get(Calendar.DAY_OF_MONTH);
+//        day+= 100;
+//        c.set(Calendar.DAY_OF_MONTH, 100);
+//        Date afterDay = c.getTime();
+//        SimpleDateFormat f = new SimpleDateFormat("西暦 yyyy 年 MM 月 dd 日");
+//        System.out.println(f.format(afterDay));
+//    }
+
+//    練習14-2
     public static void main(String[] args) {
-        Y[] array = new Y[2];
-        array[0] = new A();
-        array[1] = new B();
-        for (Y y : array) {
-            y.a();
-            y.b();
-        }
+        Account a1 = new Account();
+        a1.accountNumber = "838861";
+        a1.balance = 10000000;
+        System.out.println("口座番号： " + a1.accountNumber);
+        System.out.println("残高は、 " + formatNumber(a1.balance) + "円");
+
+    }
+
+//    残高を3ケタごとにカンマをつけて表示
+    public static final String formatNumber(int balance) {
+        NumberFormat nf = NumberFormat.getNumberInstance();
+        return nf.format(balance);
     }
 }
