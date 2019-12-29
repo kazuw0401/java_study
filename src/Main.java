@@ -8,6 +8,7 @@ import practice13.B;
 import practice13.Y;
 import practice14.Account;
 
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -112,18 +113,42 @@ public class Main {
 //    }
 
 //    練習14-2
-    public static void main(String[] args) {
-        Account a1 = new Account();
-        a1.accountNumber = "838861";
-        a1.balance = 10000000;
-        System.out.println("口座番号： " + a1.accountNumber);
-        System.out.println("残高は、 " + formatNumber(a1.balance) + "円");
-
-    }
+//    public static void main(String[] args) {
+//        Account a1 = new Account();
+//        a1.accountNumber = "838861";
+//        a1.balance = 10000000;
+//        System.out.println("口座番号： " + a1.accountNumber);
+//        System.out.println("残高は、 " + formatNumber(a1.balance) + "円");
+//
+//    }
 
 //    残高を3ケタごとにカンマをつけて表示
-    public static final String formatNumber(int balance) {
-        NumberFormat nf = NumberFormat.getNumberInstance();
-        return nf.format(balance);
+//    public static final String formatNumber(int balance) {
+//        NumberFormat nf = NumberFormat.getNumberInstance();
+//        return nf.format(balance);
+//    }
+
+//    練習15
+//    public static void main(String[] args) {
+////        try {
+////            String s = null;
+////            System.out.println(s.length());
+////
+////        } catch (NullPointerException e) {
+////            System.out.println("NullPointerExceptionをcatchしました");
+////            System.out.println("ーースタックトレース（ここから）ーー");
+////            e.printStackTrace();
+////            System.out.println("ーースタックトレース（ここまで）ーー");
+////        }
+//        try {
+//            int i = Integer.parseInt("三");
+//        } catch (NumberFormatException e) {
+//            System.out.println("半角数字を入力してください。");
+//        }
+//    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println("例外処理をして終了します。");
+        throw new IOException();
     }
 }
